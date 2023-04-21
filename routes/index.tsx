@@ -17,6 +17,11 @@ const fakeUser = createMockUser();
 mockUser(fakeUser);
 
 const Routes = () => {
+  console.log(
+    "localStorage getItem(name):",
+    window.localStorage.getItem("name")
+  );
+
   useEffect(() => {
     // NOTE: should use it only for DEV
     initRefreshService();

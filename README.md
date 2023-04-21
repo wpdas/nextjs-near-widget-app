@@ -24,6 +24,13 @@ yarn vm
 
 Now, you can see your changes in real time. Both in React App and Widget.
 
+## Widget
+
+There're two Widgets:
+
+- **NextJS.jsx:** using `mainnet`
+- **NextJS.dev.jsx**: using `testnet`
+
 ## Libraries
 
 [**NEAR Social Bridge:**](https://github.com/wpdas/near-social-bridge) A library that allows you to create a common application using ReactJS and inject it in a controlled way into a Widget on Near Social. Therefore, the Widget talks to the React application and vice versa, making it possible to consume Discovery API resources within the React application.
