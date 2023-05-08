@@ -4,6 +4,7 @@ import {
   createStackNavigator,
   initRefreshService,
   mockUser,
+  useAuth,
 } from "near-social-bridge";
 import Home from "@app/iframe-pages/Home";
 import Profile from "@app/iframe-pages/Profile";
@@ -13,8 +14,8 @@ const { Navigator, Screen } = createStackNavigator();
 
 // Mock user
 console.warn("Using fake user!");
-const fakeUser = createMockUser();
-mockUser(fakeUser);
+// const fakeUser = createMockUser();
+// mockUser(fakeUser);
 
 const Routes = () => {
   console.log(
@@ -26,6 +27,9 @@ const Routes = () => {
     // NOTE: should use it only for DEV
     initRefreshService();
   }, []);
+
+  const auth = useAuth();
+  console.log("Auth:", auth);
 
   return (
     <Navigator autoHeightSync>

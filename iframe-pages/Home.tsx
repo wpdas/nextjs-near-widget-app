@@ -10,7 +10,8 @@ function Home({ navigation }: any) {
 
   const onClickProfileHandler = () => {
     navigation.push("Profile", {
-      name: auth.user?.profileInfo?.name || "Not Signed In",
+      name:
+        auth.user?.profileInfo?.name || auth.user?.accountId || "Not Signed In",
     });
   };
 
